@@ -12,7 +12,10 @@ import numpy as np
 import openai
 import re
 import random
+import cv2
+import matplotlib as plt
 
+from deepface import DeepFace
 from dotenv import load_dotenv
 from TTS.api import TTS
 from discord.ext.commands import Bot, Context
@@ -193,13 +196,94 @@ async def on_temp(ctx, *args):
         await ctx.send(sumarisedResponse["data"][0]["url"])
 
 
-
         await ctx.send(f"`**Stable Diffusion** Whole paragraph to image:`")
         await ctx.send(file = discord.File("output/1_v1_txt2img_0.png", "img1.png"))
 
         await ctx.send(f"`**Stable Diffusion** Sumarised paragraph to image:`")
         await ctx.send(file = discord.File("output/2_v1_txt2img_0.png", "img2.png"))
 
+    
+
+@bot.command("face", pass_context = True)
+async def on_temp(ctx, *args):
+
+    def getModelList():
+        url = f"{api_host}/v1/engines/list"
+        response = requests.get(url, headers={"Authorization": f"Bearer {api_key}"})
+
+        if response.status_code == 200:
+            payload = response.json()
+            print(payload)
+
+
+    height = 512
+    width = 512
+    steps = 50
 
     
+    def generateStableDiffusionImage(prompt, height, width, steps, arg):
+        url = f"{api_host}/v1/generation/{engine_id}/text-to-image"
+        headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {api_key}"
+        }
+        payload = {}
+        payload['text_prompts'] = [{"text": f"{prompt}"}]
+        payload['cfg_scale'] = 7
+        payload['clip_guidance_preset'] = 'FAST_BLUE'
+        payload['height'] = height
+        payload['width'] = width
+        payload['samples'] = 1
+        payload['steps'] = steps
+
+        response = requests.post(url,headers=headers,json=payload)
+
+        #Processing the response
+        if response.status_code == 200:
+            data = response.json()
+            for i, image in enumerate(data["artifacts"]):
+                with open(f"output/{arg}_v1_txt2img_{i}.png", "wb") as f:
+                    f.write(base64.b64decode(image["base64"]))
+
+
+    staticPrompt = "Generate a 1 paragraph text for a face with the follwing attributes:\n\n"
+
+    messages = [{"role": "system", "content": "You are a kind helpful assistant."}]
+
+    arg = ' '.join(args)
+
+    message = staticPrompt + arg
+
+    if message:
+        messages.append(
+            {"role": "user", "content": message},
+        )
+        chat = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo-16k", messages=messages
+        )
+
+    
+    reply = chat.choices[0].message.content
+
+    print(reply)
+
+    response = openai.Image.create(prompt=reply,n=1,size="512x512")
+
+    generateStableDiffusionImage(reply, height, width, steps, "1")
+
+    await ctx.send(f"`**Stable Diffusion** Face:`")
+    await ctx.send(file = discord.File("output/1_v1_txt2img_0.png", "img1.png"))
+    obj = DeepFace.analyze(img_path = "output/1_v1_txt2img_0.png", actions = ['age', 'gender', 'race', 'emotion'])
+    for i in range(len(obj)):
+        await ctx.send(f"`Prediction {i+1}: {obj[i]['age']}, {obj[i]['dominant_gender']}, {obj[i]['dominant_race']}, {obj[i]['dominant_emotion']}`")
+        
+        
+
+
+
+
+
+
+
 bot.run(DISCORD_TOKEN)
