@@ -1,0 +1,6 @@
+openai
+discord.py
+python_weather
+python-espeak-ng
+numpy==1.24.0
+tts
