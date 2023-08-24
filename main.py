@@ -12,7 +12,6 @@ import numpy as np
 import openai
 import re
 import random
-import cv2
 import matplotlib as plt
 
 from deepface import DeepFace
