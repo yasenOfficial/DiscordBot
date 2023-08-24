@@ -35,6 +35,7 @@ engine_id = 'stable-diffusion-xl-beta-v2-2-2'
 bot = Bot("!", intents=discord.Intents.all())
 
 helpDict = {"prefix": "!",
+            "face": "Generates a face from a given attributes + prediction",
             "hello": "Greets the user and shows the time",
             "temp": "Shows the temperature in Stara Zagora", 
             "help": "Shows this message",
@@ -277,12 +278,6 @@ async def on_temp(ctx, *args):
     obj = DeepFace.analyze(img_path = "output/1_v1_txt2img_0.png", actions = ['age', 'gender', 'race', 'emotion'])
     for i in range(len(obj)):
         await ctx.send(f"`Prediction {i+1}: {obj[i]['age']}, {obj[i]['dominant_gender']}, {obj[i]['dominant_race']}, {obj[i]['dominant_emotion']}`")
-        
-        
-
-
-
-
 
 
 
