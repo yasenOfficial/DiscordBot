@@ -39,16 +39,17 @@ pip install -r requirements.txt
 
 Configure the bot by creating a .env file in the project root and adding your API keys and Discord bot token.
 
-plaintext
 
 ```
 sudo nano .env
 ```
 paste this:
 
+```
 DISCORD_TOKEN=your_discord_bot_token <br />
 OPEN_API_KEY=your_chatgpt_api_key <br />
 STABILITY_API_KEY=your_stability_ai_api_key <br />
+```
 
 Start the bot. Disclaimer! Text to speech (TTS) only works on linux based opperating systems
 
