@@ -46,9 +46,9 @@ sudo nano .env
 ```
 paste this:
 
-DISCORD_TOKEN=your_discord_bot_token &nbsp 
-OPEN_API_KEY=your_chatgpt_api_key &nbsp
-STABILITY_API_KEY=your_stability_ai_api_key &nbsp
+DISCORD_TOKEN=your_discord_bot_token <br />
+OPEN_API_KEY=your_chatgpt_api_key <br />
+STABILITY_API_KEY=your_stability_ai_api_key <br />
 
 Start the bot. Disclaimer! Text to speech (TTS) only works on linux based opperating systems
 
