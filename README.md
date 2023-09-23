@@ -1,8 +1,8 @@
 # Topcho
-Bot Logo
+![Topcho](https://github.com/yasenOfficial/Topcho-Discord-Bot/blob/main/discordbot.png)
 
 # Introduction
-Welcome to the Discord AI Bot, a versatile and intelligent bot that utilizes the power of ChatGPT, DALL·E, and Stability AI APIs. This bot enables your Discord server members to generate text that is then converted to speech (TTS), and create images using advanced AI technologies. Whether you want to have engaging conversations, generate creative content, or enhance your server's media, this bot has you covered.
+Welcome Topcho, a versatile and intelligent bot that utilizes the power of ChatGPT, DALL·E, and Stability AI APIs. This bot enables your Discord server members to generate text that is then converted to speech (TTS), and create images using advanced AI technologies. Whether you want to have engaging conversations, generate creative content, or enhance your server's media, this bot has you covered.
 
 # Features
 ChatGPT Integration: Engage in natural language conversations with ChatGPT. The bot can answer questions, provide information, and generate text based on user input.
