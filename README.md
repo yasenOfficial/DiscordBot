@@ -69,5 +69,5 @@ Invite the bot to your Discord server and use the provided commands to interact 
 
 I welcome contributions and improvements to this Discord AI Bot. Feel free to fork the repository, make changes, and submit a pull request.
 
-License
+### License
 This Discord AI Bot is provided under the MIT License. You are free to modify, distribute, and use it for personal and non-commercial purposes. Please refer to the full license documentation for more details.
