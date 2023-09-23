@@ -1,10 +1,10 @@
-Discord AI Bot - ChatGPT, DALL·E, and Stability AI Integration
+# Topcho
 Bot Logo
 
-Introduction
+# Introduction
 Welcome to the Discord AI Bot, a versatile and intelligent bot that utilizes the power of ChatGPT, DALL·E, and Stability AI APIs. This bot enables your Discord server members to generate text that is then converted to speech (TTS), and create images using advanced AI technologies. Whether you want to have engaging conversations, generate creative content, or enhance your server's media, this bot has you covered.
 
-Features
+# Features
 ChatGPT Integration: Engage in natural language conversations with ChatGPT. The bot can answer questions, provide information, and generate text based on user input.
 
 DALL·E, Stability AI Integration: Generate unique and imaginative images using the DALL·E and Stability AI API. Describe your vision, and the bot will create visuals that match your description.
@@ -15,17 +15,15 @@ Getting Started
 Prerequisites
 Discord Bot Token: Create a Discord bot and obtain a token. Follow the official Discord developer documentation for instructions.
 
-API Keys:
+# API Keys:
 
 ChatGPT API Key
-DALL·E API Key
 Stability AI API Key
 Python - make sure you have python 3.11 installed
 
-Installation
+# Installation
+
 Clone this repository to your server.
-
-
 ```
 git clone https://github.com/yasenOfficial/Topcho-Discord-Bot
 ```
