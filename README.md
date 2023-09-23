@@ -51,7 +51,7 @@ OPEN_API_KEY=your_chatgpt_api_key <br />
 STABILITY_API_KEY=your_stability_ai_api_key <br />
 ```
 
-Start the bot. Disclaimer! Text to speech (TTS) only works on linux based opperating systems
+Start the bot. Disclaimer! Text to speech (TTS) only works on linux based operating systems
 
 ```
 python main.py
