@@ -12,14 +12,12 @@ DALL·E, Stability AI Integration: Generate unique and imaginative images using 
 Text-to-Speech (TTS): Convert text messages into speech and play them in voice channels, enhancing accessibility and interactivity.
 
 Getting Started
-Prerequisites
-Discord Bot Token: Create a Discord bot and obtain a token. Follow the official Discord developer documentation for instructions.
+Python - make sure you have python 3.11 installed&nbsp
 
 # API Keys:
 
-ChatGPT API Key
-Stability AI API Key
-Python - make sure you have python 3.11 installed
+ChatGPT API Key&nbsp
+Stability AI API Key&nbsp
 
 # Installation
 
