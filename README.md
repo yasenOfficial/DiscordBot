@@ -12,12 +12,12 @@ DALL·E, Stability AI Integration: Generate unique and imaginative images using 
 Text-to-Speech (TTS): Convert text messages into speech and play them in voice channels, enhancing accessibility and interactivity.
 
 Getting Started
-Python - make sure you have python 3.11 installed&nbsp
+Python - make sure you have python 3.11 installed
 
 # API Keys:
 
-ChatGPT API Key&nbsp
-Stability AI API Key&nbsp
+ChatGPT API Key &nbsp
+Stability AI API Key &nbsp
 
 # Installation
 
