@@ -16,8 +16,8 @@ Python - make sure you have python 3.11 installed
 
 ## API Keys:
 
-ChatGPT API Key &nbsp
-Stability AI API Key &nbsp
+ChatGPT API Key <br />
+Stability AI API Key <br />
 
 ## Installation
 
